@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The ORM Blog</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <p class="blog-title">The ORM Blog <i class="large material-icons">laptop_mac</i></p>
+      </h1>
+    
+    <nav>
+    {{#if loggedIn}}
+    <a href="/" class="homepage">Homepage</a>
+    <a href="/dashboard">Dashboard</a>
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/" class="homepage">Homepage</a>
+    <a href="/login">Login</a>
+    {{/if}}
+    </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+  </div>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+</html>
